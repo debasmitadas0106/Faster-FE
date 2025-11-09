@@ -1,0 +1,185 @@
+/* ========== GLOBAL CONTAINER ========== */
+.register-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ========== LEFT SECTION (IMAGE + OVERLAY TEXT) ========== */
+.register-left {
+  width: 50%; /* ✅ exact half */
+  position: relative;
+  background-color: #0d6efd;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.register-left img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.overlay-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  max-width: 400px;
+}
+
+.overlay-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.overlay-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ========== RIGHT SECTION (FORM AREA) ========== */
+.register-right {
+  width: 50%; /* ✅ equal half */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ✅ ensures form starts from top */
+  background-color: #ffffff;
+  padding: 50px 0;
+  overflow-y: auto; /* ✅ allows scroll for long form */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* ========== FORM CONTAINER ========== */
+.register-form-container {
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Titles & Subtitles */
+.register-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.register-form-container p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+/* ========== FORM ELEMENTS ========== */
+.register-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.register-form-container label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.register-form-container input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.register-form-container input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 4px rgba(13, 110, 253, 0.3);
+  outline: none;
+}
+
+/* Section headings inside form */
+.register-form-container h3 {
+  margin-top: 18px;
+  font-size: 1.1rem;
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+/* ========== SUBMIT BUTTON ========== */
+.register-form-container button {
+  margin-top: 14px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #042961;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.register-form-container button:hover {
+  background-color: #084298;
+  transform: translateY(-1px);
+}
+
+/* ========== SCROLLBAR (OPTIONAL STYLING) ========== */
+.register-right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.register-right::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 900px) {
+  .register-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .register-left {
+    width: 100%;
+    height: 220px;
+  }
+
+  .register-right {
+    width: 100%;
+    padding: 30px 0;
+    align-items: center;
+  }
+
+  .register-form-container {
+    box-shadow: none;
+    border-radius: 0;
+    width: 90%;
+  }
+
+  .overlay-text h2 {
+    font-size: 1.5rem;
+  }
+}

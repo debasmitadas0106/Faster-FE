@@ -1,0 +1,131 @@
+/* Center the login container */
+.login-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1c2532, hsl(213, 22%, 18%));
+}
+
+/* Card-style box */
+.login-container {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.signIn {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* Subtitle */
+.login-container p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 18px;
+}
+
+/* Each field group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Label row for password + link */
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-row label {
+  font-weight: 600;
+  color: #000;
+}
+
+.forgot-password {
+  color: #0969da;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Inputs */
+form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  color: black;
+  background-color: #fff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus {
+  border-color: #0969da;
+  box-shadow: 0 0 4px rgba(9, 105, 218, 0.3);
+  outline: none;
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0d1117;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #24292f;
+}
+form label {
+  font-weight: 600;
+  font-size: 13.6px;
+  color: #000;
+}
+.register-text {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.register-link {
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}

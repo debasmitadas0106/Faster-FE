@@ -1,0 +1,36 @@
+/* The main navbar container */
+.navbar {
+  position: fixed; /* Keeps the navbar fixed at the top even when scrolling */
+  top: 0; /* Aligns navbar to the very top of the viewport */
+  left: 0; /* Ensures it starts from the left edge */
+  width: 100%; /* Spans the entire width of the screen */
+  display: flex; /* Uses flexbox for easy horizontal alignment */
+  justify-content: space-between; /* Places logo on the left, links on the right */
+  align-items: center; /* Vertically centers items within the navbar */
+  padding-top: 10px; /* Adds top spacing inside the navbar */
+  padding-bottom: 10px; /* Adds bottom spacing inside the navbar */
+  padding-left: 10px; /* Adds left spacing inside the navbar */
+  background-color: #0d1117; /* Dark background color for modern look */
+  color: white; /* Sets the text color to white for contrast */
+}
+
+/* Styles for the "Faster" logo text */
+.logo {
+  font-size: 1.5rem; /* Increases font size to make logo stand out */
+  font-weight: bold; /* Makes the logo text bold for emphasis */
+}
+
+/* Styles for each navigation link (About, Sign In, Careers) */
+.nav-links a {
+  color: white; /* Default link color */
+  text-decoration: none; /* Removes underlines from links */
+  margin-left: 15px; /* Adds horizontal space between each link */
+  padding-right: 28px; /* Adds extra spacing on the right side of links */
+  font-size: 1rem; /* Sets consistent font size */
+  transition: color 0.3s ease; /* Smooth color transition effect on hover */
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+  color: #58a6ff; /* Changes link color to blue when hovered */
+}
