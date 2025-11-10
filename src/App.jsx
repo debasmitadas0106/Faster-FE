@@ -10,7 +10,7 @@ import About from "./pages/About";
 import SignIn from "./pages/SignIn";
 import Careers from "./pages/Careers";
 import Dashboard from "./pages/Dashboard";
-import Register from "./pages/register";
+import Register from "./pages/Register_temp";
 import "./App.css";
 
 function App() {
