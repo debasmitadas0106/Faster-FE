@@ -22,11 +22,11 @@ function SignIn() {
         localStorage.setItem("authToken", token);
         localStorage.setItem("dbName", userdetail.accountId); // if that's your db name
 
-        // Conditional navigation
+        // Conditional navigation (client-side)
         if (!userdetail.token || userdetail.token === "") {
-          window.location.href = "/dashboard";
+          navigate("/dashboard");
         } else {
-          window.location.href = "/verifyuser";
+          navigate("/verifyuser");
         }
       } else {
         alert("Login failed, please try again.");
@@ -75,6 +75,7 @@ function SignIn() {
 
           <button type="submit">Sign In</button>
         </form>
+
         <p className="register-text">
           Not a user?{" "}
           <span className="register-link" onClick={() => navigate("/register")}>
