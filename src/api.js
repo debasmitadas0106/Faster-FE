@@ -1,5 +1,5 @@
 const BASE_URL =
-  "http://faster-env-1.eba-8z6psnp6.eu-north-1.elasticbeanstalk.com/api"; // ✅ Change this to your actual backend URL
+  "https://fasterfrontend.fun/api"; // ✅ Change this to your actual backend URL
 
 // Login API
 export const loginUser = async ({ username, password }) => {
