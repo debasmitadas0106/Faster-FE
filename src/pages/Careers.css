@@ -1,0 +1,96 @@
+/* ---------- Page Layout ---------- */
+.careers-page {
+  padding: 60px 10%;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  color: #1f2937; /* slate gray */
+}
+
+/* ---------- Headings ---------- */
+.careers-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #111827;
+  letter-spacing: 0.5px;
+}
+
+.careers-subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ---------- Jobs Container ---------- */
+.jobs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ---------- Job Card ---------- */
+.job-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease-in-out;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* ---------- Job Info ---------- */
+.job-info h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+.job-info p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+/* ---------- Apply Button ---------- */
+.apply-btn {
+  background-color: #2563eb; /* primary blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.apply-btn:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 3px 8px rgba(29, 78, 216, 0.35);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .job-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .apply-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}
