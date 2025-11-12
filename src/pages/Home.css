@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* hero section wraps both image + text */
+.dashboard-hero {
+  position: relative; /* allows .dashboard-text to sit on top of the image */
+  margin-top: 0px; /* small gap below navbar */
+  z-index: 0; /* stays behind navbar */
+}
+
+/* banner image */
+.dashboard-banner {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block; /* removes default inline spacing of <img> */
+}
+
+/* text overlay */
+.dashboard-text {
+  position: absolute; /* positions it inside .dashboard-hero */
+  top: 75%; /* halfway down the image */
+  left: 50%; /* halfway across the image */
+  transform: translate(-50%, -50%); /* centers perfectly */
+  color: white;
+  z-index: 1; /* above the image, below navbar */
+}
+.dashboard-text p {
+  margin-left: 15%;
+}
+
+.navbar {
+  position: relative; /* or fixed if you want it pinned */
+  z-index: 10; /* ✅ ensures it's above the hero image */
+}
