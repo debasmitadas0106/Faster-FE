@@ -1,21 +1,24 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
 }
 
-/* hero section wraps both image + text */
+/* ---------------- HERO SECTION ---------------- */
 .dashboard-hero {
-  position: relative; /* allows .dashboard-text to sit on top of the image */
-  margin-top: 0px; /* small gap below navbar */
-  z-index: 0; /* stays behind navbar */
+  position: relative;
+  margin-top: 0;
+  z-index: 0;
 }
 
-/* banner image */
 .dashboard-banner {
   width: 100%;
   height: 450px;
   object-fit: cover;
-  display: block; /* removes default inline spacing of <img> */
+  display: block;
+  filter: brightness(90%); /* darken image slightly so text is visible */
 }
 
 /* text overlay */
@@ -31,7 +34,97 @@ body {
   margin-left: 15%;
 }
 
-.navbar {
-  position: relative; /* or fixed if you want it pinned */
-  z-index: 10; /* ✅ ensures it's above the hero image */
+/* ---------------- FEATURES SECTION ---------------- */
+.features-section {
+  text-align: center;
+  padding: 60px 10%;
+  background-color: #f9fafb;
+}
+
+.features-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.features-subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 40px;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  padding: 25px 20px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* ---------------- FOOTER ---------------- */
+.home-footer {
+  text-align: center;
+  padding: 30px;
+  color: #374151;
+  background-color: #f3f4f6;
+  margin-top: 60px;
+}
+
+.home-footer a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .dashboard-text h1 {
+    font-size: 2rem;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+  }
 }
