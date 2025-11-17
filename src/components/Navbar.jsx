@@ -75,12 +75,14 @@ function Navbar() {
             Sign In
           </Link>
         ) : (
-          <div
-            className="user-menu"
-            ref={dropdownRef}
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
-            <div className="user-badge">{userInitial}</div>
+          <div className="user-menu" ref={dropdownRef}>
+            <div
+              className="user-link"
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+            >
+              <div className="user-badge">{userInitial}</div>
+            </div>
+
             {dropdownOpen && (
               <div className="dropdown">
                 <button onClick={() => navigate("/profile")}>My Profile</button>
