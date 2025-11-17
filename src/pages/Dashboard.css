@@ -35,3 +35,45 @@ body {
   position: relative; /* or fixed if you want it pinned */
   z-index: 10; /* ✅ ensures it's above the hero image */
 }
+
+@media (max-width: 768px) {
+  .dashboard-banner {
+    height: 350px; /* reduce height slightly */
+  }
+
+  .dashboard-text h1 {
+    font-size: 2rem; /* reduce heading size */
+  }
+
+  .dashboard-text p {
+    font-size: 1rem; /* reduce paragraph size */
+    margin-left: 0; /* remove unnecessary left offset */
+  }
+
+  .dashboard-text {
+    top: 60%; /* move overlay text a bit higher */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  .dashboard-banner {
+    height: 280px; /* make image shorter */
+  }
+
+  .dashboard-text h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .dashboard-text p {
+    font-size: 0.9rem;
+    margin-left: 0;
+    text-align: center;
+    padding: 0 10px; /* add padding for smaller screens */
+  }
+
+  .dashboard-text {
+    top: 55%; /* move text up slightly */
+  }
+}

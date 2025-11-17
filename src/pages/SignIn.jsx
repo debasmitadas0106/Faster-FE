@@ -16,13 +16,13 @@ function SignIn() {
       console.log("Login successful:", response);
 
       if (response.status === "success") {
-        const { token, userdetail } = response.data;
+        const { token, userdetail, accountDetails } = response.data;
 
         // Store credentials in localStorage
-        localStorage.setItem("authToken", token);
-        localStorage.setItem("dbName", userdetail.accountId); // if that's your db name
+        localStorage.setItem("authorization", token);
+        localStorage.setItem("dburl", accountDetails.dbName);
+        localStorage.setItem("firstName", userdetail.firstName);
 
-        // Conditional navigation (client-side)
         if (!userdetail.token || userdetail.token === "") {
           navigate("/dashboard");
         } else {
