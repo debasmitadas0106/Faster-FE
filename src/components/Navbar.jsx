@@ -85,7 +85,15 @@ function Navbar() {
 
             {dropdownOpen && (
               <div className="dropdown">
-                <button onClick={() => navigate("/profile")}>My Profile</button>
+                <button
+                  onClick={() => {
+                    setDropdownOpen(false);
+                    menuOpen && setMenuOpen(false);
+                    navigate("/profile");
+                  }}
+                >
+                  My Profile
+                </button>
                 <button onClick={handleLogout}>Sign Out</button>
               </div>
             )}
