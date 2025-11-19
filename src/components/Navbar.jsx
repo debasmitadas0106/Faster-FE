@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 function Navbar() {
   const [authData, setAuthData] = useState({
     token: localStorage.getItem("authorization"),
-    dbName: localStorage.getItem("dburl"),
+    dburl: localStorage.getItem("dburl"),
     firstName: localStorage.getItem("firstName"),
   });
 
@@ -18,7 +18,7 @@ function Navbar() {
     const updateAuthData = () => {
       setAuthData({
         token: localStorage.getItem("authorization"),
-        dburl: localStorage.getItem("dbName"),
+        dburl: localStorage.getItem("dburl"),
         firstName: localStorage.getItem("firstName"),
       });
     };
