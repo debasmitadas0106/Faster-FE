@@ -18,7 +18,7 @@ function Navbar() {
     const updateAuthData = () => {
       setAuthData({
         token: localStorage.getItem("authorization"),
-        dbName: localStorage.getItem("dburl"),
+        dburl: localStorage.getItem("dbName"),
         firstName: localStorage.getItem("firstName"),
       });
     };
@@ -38,7 +38,7 @@ function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const isLoggedIn = authData.token && authData.dbName && authData.firstName;
+  const isLoggedIn = authData.token && authData.dburl && authData.firstName;
   const userInitial = authData.firstName?.charAt(0).toUpperCase();
 
   const handleLogout = () => {
