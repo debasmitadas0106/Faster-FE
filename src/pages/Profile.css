@@ -1,0 +1,45 @@
+body {
+  background-color: rgb(69, 67, 67);
+}
+.profile-dp-container {
+  position: relative;
+  margin-top: 160px;
+  margin-left: 100px;
+  width: 330px;
+  height: 410px;
+  background-color: rgb(253, 125, 90);
+  border: 1px solid #f4f1f1;
+  border-radius: 8%;
+  z-index: 1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .profile-dp-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+} */
+
+.profile-dp {
+  position: absolute;
+  top: 140px;
+  left: 165px;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-image: url("/durgama.jpg");
+  background-size: cover; /* fills the area without stretching */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  z-index: 10;
+}
+.profile-name {
+  position: absolute;
+  top: 360px;
+  left: 183px;
+  z-index: 10;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
