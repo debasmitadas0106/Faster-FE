@@ -1,95 +1,95 @@
 body {
-  background-color: rgb(255, 249, 249);
+  background-color: rgb(242, 239, 239);
 }
-.profile-dp-container {
+.profile-page {
+  overflow: visible;
+}
+.cover-photo {
   position: relative;
-  margin-top: 20vh;
-  margin-left: 8vw;
-  width: 22vw;
-  height: 55vh;
-  background-color: rgb(253, 125, 90);
-  border-radius: 8%;
-  box-shadow: 0 8px 20px rgba(174, 171, 171, 0.678);
+  width: 100vw;
+  height: 47vh;
+  background-image: url("/cover1.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-/* DP */
+.profile-dp-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  height: 68vh;
+  border-radius: 2.5%;
+  background-color: rgb(242, 239, 239);
+  box-shadow: 0 10px 10px rgb(157, 156, 156);
+  overflow: visible;
+  z-index: 1;
+}
+
 .profile-dp {
   position: absolute;
+  display: flex;
+  align-items: center;
   top: 20%;
-  left: 19%;
-  transform: translate(-50%, -20%);
+  left: 50%;
+  transform: translateX(-50%);
   width: 12vw;
   height: 12vw;
   border-radius: 50%;
-  background-image: url("/durgama.jpg");
-  background-size: cover;
+  /* background-color: black; */
+  background-image: url("/girl.jpg");
   background-position: center;
-  border: 2px solid black;
+  background-size: cover;
+  box-shadow: 0 10px 10px rgb(157, 156, 156);
+  z-index: 2;
 }
-
-/* NAME */
-.profile-name {
-  position: absolute;
-  top: 45%;
-  left: 19%;
-  transform: translateX(-50%);
-  font-size: 1.3rem;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-}
-
 .dropdown {
   z-index: 100;
 }
 
-/* ======================
-   MOBILE: max-width 768px
-   ====================== */
-@media (max-width: 855px) {
+@media (max-width: 480px) {
   .profile-dp-container {
+    top: 30%;
     width: 80vw;
-    height: 70vh;
-    margin-left: 10vw; /* centered-ish */
-    margin-top: 18vh;
+    height: 60vh;
   }
-
   .profile-dp {
-    width: 35vw;
-    height: 35vw;
-    top: 20%;
-    left: 50%;
-  }
-
-  .profile-name {
-    top: 110%;
-    left: 70%;
-    width: 50vw;
-    font-size: 2.1rem;
+    top: 22%;
+    width: 30vw;
+    height: 30vw;
   }
 }
 
-/* ======================
-   SMALL MOBILE: max-width 480px
-   ====================== */
-@media (max-width: 480px) {
+@media (min-width: 850px) and (max-width: 1100px) {
+  .cover-photo{
+    height:40vh;
+  }
   .profile-dp-container {
-    width: 80vw;
-    height: 58vh;
-    margin-left: 10vw; /* center even more */
-    margin-top: 19vh;
-  }
-
-  .profile-dp {
-    width: 45vw;
-    height: 45vw;
     top: 25%;
-    left: 50%;
+    width: 70vw;
+    height: 50vh;
   }
+  .profile-dp {
+    top: 18%;
+    width: 20vw;
+    height: 20vw;
+  }
+}
 
-  .profile-name {
-    top: 110%;
-    left: 64%;
-    width: 50vw;
-    font-size: 1.2rem;
+@media (min-width: 481px) and (max-width: 849px) {
+  .profile-dp-container {
+    top: 28%;
+    transform: translateX(-50%);
+    width: 86vw;
+    height: 65vh;
+  }
+  .profile-dp {
+    top: 18%;
+    transform: translateX(-50%);
+    width: 26vw;
+    height: 26vw;
   }
 }
