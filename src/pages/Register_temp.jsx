@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { registerUser } from "../api";
+import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
 function Register() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     userName: "",
     email: "",
@@ -41,6 +43,7 @@ function Register() {
       const response = await registerUser(payload);
       console.log("Registration successful:", response);
       alert("Registration successful!");
+      navigate("/signin");
     } catch (error) {
       console.error("Registration failed:", error);
       alert("Something went wrong. Please try again.");
