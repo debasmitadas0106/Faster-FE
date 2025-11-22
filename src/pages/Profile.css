@@ -1,45 +1,95 @@
 body {
-  background-color: rgb(69, 67, 67);
+  background-color: rgb(255, 249, 249);
 }
 .profile-dp-container {
   position: relative;
-  margin-top: 160px;
-  margin-left: 100px;
-  width: 330px;
-  height: 410px;
+  margin-top: 20vh;
+  margin-left: 8vw;
+  width: 22vw;
+  height: 55vh;
   background-color: rgb(253, 125, 90);
-  border: 1px solid #f4f1f1;
   border-radius: 8%;
-  z-index: 1;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(174, 171, 171, 0.678);
 }
 
-/* .profile-dp-container:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-} */
-
+/* DP */
 .profile-dp {
   position: absolute;
-  top: 140px;
-  left: 165px;
-  height: 200px;
-  width: 200px;
+  top: 20%;
+  left: 19%;
+  transform: translate(-50%, -20%);
+  width: 12vw;
+  height: 12vw;
   border-radius: 50%;
   background-image: url("/durgama.jpg");
-  background-size: cover; /* fills the area without stretching */
-  background-position: center; /* centers the image */
-  background-repeat: no-repeat;
-  border: 1px solid black;
-  z-index: 10;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid black;
 }
+
+/* NAME */
 .profile-name {
   position: absolute;
-  top: 360px;
-  left: 183px;
-  z-index: 10;
-  font-size: 22px;
+  top: 45%;
+  left: 19%;
+  transform: translateX(-50%);
+  font-size: 1.3rem;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
+}
+
+.dropdown {
+  z-index: 100;
+}
+
+/* ======================
+   MOBILE: max-width 768px
+   ====================== */
+@media (max-width: 855px) {
+  .profile-dp-container {
+    width: 80vw;
+    height: 70vh;
+    margin-left: 10vw; /* centered-ish */
+    margin-top: 18vh;
+  }
+
+  .profile-dp {
+    width: 35vw;
+    height: 35vw;
+    top: 20%;
+    left: 50%;
+  }
+
+  .profile-name {
+    top: 110%;
+    left: 70%;
+    width: 50vw;
+    font-size: 2.1rem;
+  }
+}
+
+/* ======================
+   SMALL MOBILE: max-width 480px
+   ====================== */
+@media (max-width: 480px) {
+  .profile-dp-container {
+    width: 80vw;
+    height: 58vh;
+    margin-left: 10vw; /* center even more */
+    margin-top: 19vh;
+  }
+
+  .profile-dp {
+    width: 45vw;
+    height: 45vw;
+    top: 25%;
+    left: 50%;
+  }
+
+  .profile-name {
+    top: 110%;
+    left: 64%;
+    width: 50vw;
+    font-size: 1.2rem;
+  }
 }
