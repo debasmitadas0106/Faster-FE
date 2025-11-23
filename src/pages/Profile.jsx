@@ -4,12 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { getUser } from "../api";
 
 function Profile() {
-  // const [authData, setAuthData] = useState({
-  //   token: localStorage.getItem("authorization"),
-  //   dburl: localStorage.getItem("dburl"),
-  //   firstName: localStorage.getItem("firstName"),
-  // });
-  // const navigate = useNavigate();
+  const [authData, setAuthData] = useState({
+    token: localStorage.getItem("authorization"),
+    dburl: localStorage.getItem("dburl"),
+    firstName: localStorage.getItem("firstName"),
+  });
+  const navigate = useNavigate();
   // const hangleUser= async (e)=>{
   //   e.preventDefault();
   //   try {
