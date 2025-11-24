@@ -56,23 +56,18 @@ function Profile() {
       <div className="user-name">
         {userDetails?.firstName} {userDetails?.lastName}
       </div>
-      <div className="user-email">email id : {userDetails?.email}</div>
-      <div className="user-address">Address :</div>
-      <div className="user-address-flat">
-        flat No. : {userDetails?.userAddress[0]?.flatNo},
-      </div>
-      <div className="user-address-street">
-        Street : {userDetails?.userAddress[0]?.street},
-      </div>
-      <div className="user-address-city">
-        City : {userDetails?.userAddress[0]?.city || "Bengaluru"}{" "}
-      </div>
-      <div className="user-address-pincode">
-        Pincode : {userDetails?.userAddress[0]?.pincode}
-      </div>
-      <div className="user-address-phone">phone : {userDetails?.phone}</div>
-      <div className="user-address-active">
-        active : {String(userDetails?.active)}
+      <div className="user-info">
+        <div className="user-email">Email : {userDetails?.email}</div>
+
+        <div className="user-address-section">
+          <div className="user-address">Address :</div>
+          <div>Flat: {userDetails?.userAddress[0]?.flatNo}</div>
+          <div>Street: {userDetails?.userAddress[0]?.street}</div>
+          <div>City: {userDetails?.userAddress[0]?.city || "Bengaluru"}</div>
+          <div>Pincode: {userDetails?.userAddress[0]?.pincode}</div>
+          <div>Phone: {userDetails?.phone}</div>
+          <div>Active: {String(userDetails?.active)}</div>
+        </div>
       </div>
     </div>
   );
