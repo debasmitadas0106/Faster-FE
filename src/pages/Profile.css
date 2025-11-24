@@ -23,7 +23,7 @@ body {
   width: 50vw;
   height: 68vh;
   border-radius: 2.5%;
-  background-color: rgb(242, 239, 239);
+  background-color: rgb(242, 244, 212);
   box-shadow: 0 10px 10px rgb(157, 156, 156);
   overflow: visible;
   z-index: 1;
@@ -54,6 +54,15 @@ body {
   transform: translateX(-50%);
   z-index: 3;
 }
+.user-name{
+  z-index:4;
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform:translateX(-50%);
+}
 .dropdown {
   z-index: 100;
 }
@@ -81,7 +90,7 @@ body {
   .profile-dp-container {
     top: 25%;
     width: 70vw;
-    height: 50vh;
+    height: 65vh;
   }
   .profile-dp {
     top: 18%;

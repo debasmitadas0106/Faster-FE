@@ -29,19 +29,19 @@ export const registerUser = async (userData) => {
     throw error.response ? error.response.data : error;
   }
 };
-export const getUser = async () => {
+export const getUser = async ({ token, dburl, username }) => {
   try {
-    const token = localStorage.getItem("authToken");
-    const dbName = localStorage.getItem("dburl");
-
-    if (!token || !dbName) {
+    if (!token || !dburl) {
       throw new Error("Missing token or dbName in localStorage");
     }
 
-    const response = await api.get("/user", {
+    const response = await api.get("/userDetails", {
       headers: {
         Authorization: `Bearer ${token}`,
-        "X-DB-Name": dbName, // custom header
+        dburl: dburl,
+      },
+      params: {
+        searchKey: username,
       },
     });
 

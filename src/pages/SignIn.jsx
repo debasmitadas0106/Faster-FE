@@ -22,6 +22,7 @@ function SignIn() {
         localStorage.setItem("authorization", token);
         localStorage.setItem("dburl", accountDetails.dbName);
         localStorage.setItem("firstName", userdetail.firstName);
+        localStorage.setItem("username", userdetail.userName);
 
         if (!userdetail.token || userdetail.token === "") {
           navigate("/dashboard");
