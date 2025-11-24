@@ -48,10 +48,31 @@ function Profile() {
       <div className="cover-photo"></div>
       <div className="profile-dp-container"></div>
       <div className="profile-dp">
+        <div className="user-profile-update-button">
+          <img src="edit.png" />
+        </div>
         <div className="user-initial">{userInitial}</div>
       </div>
       <div className="user-name">
-        {userDetails.firstName} {userDetails.lastName}
+        {userDetails?.firstName} {userDetails?.lastName}
+      </div>
+      <div className="user-email">email id : {userDetails?.email}</div>
+      <div className="user-address">Address :</div>
+      <div className="user-address-flat">
+        flat No. : {userDetails?.userAddress[0]?.flatNo},
+      </div>
+      <div className="user-address-street">
+        Street : {userDetails?.userAddress[0]?.street},
+      </div>
+      <div className="user-address-city">
+        City : {userDetails?.userAddress[0]?.city || "Bengaluru"}{" "}
+      </div>
+      <div className="user-address-pincode">
+        Pincode : {userDetails?.userAddress[0]?.pincode}
+      </div>
+      <div className="user-address-phone">phone : {userDetails?.phone}</div>
+      <div className="user-address-active">
+        active : {String(userDetails?.active)}
       </div>
     </div>
   );
