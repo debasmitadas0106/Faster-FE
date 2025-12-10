@@ -12,6 +12,7 @@ import Careers from "./pages/Careers";
 import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register_temp";
 import Profile from "./pages/Profile";
+import Verify from "./pages/Verify";
 import "./App.css";
 
 function App() {
@@ -43,6 +44,7 @@ function AppContent() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/verify" element={<Verify />} />
         </Routes>
       </div>
     </>

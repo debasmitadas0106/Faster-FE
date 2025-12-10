@@ -51,3 +51,19 @@ export const getUser = async ({ token, dburl, username }) => {
     throw error.response ? error.response.data : error;
   }
 };
+export const verify = async (token) => {
+  try {
+    if (!token) {
+      throw new Error("Missing token");
+    }
+
+    const response = await api.post("/user/verify-email", {
+      token: token,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error("Get user error:", error);
+    throw error.response ? error.response.data : error;
+  }
+};
