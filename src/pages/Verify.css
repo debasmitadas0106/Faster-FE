@@ -1,16 +1,19 @@
 body {
+  margin: 0;
   background-color: rgb(60, 60, 95);
 }
 
 .verify-email-container {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 90vh;
+  height: 60vh;
 }
 
 .verify-email-box {
+  margin:0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -73,4 +76,66 @@ body {
 }
 .verify-now:hover {
   background-color: rgb(17, 17, 48);
+}
+
+@media (max-width: 480px) {
+  .verify-email-box {
+    width: 80vw;
+    height: 40vh;
+  }
+  .verify-now {
+    width: 75vw;
+    top: 53%;
+  }
+  .email-verify {
+    width: 50vw;
+    top: 34%;
+  }
+  .verify-email-tab {
+    top: 40%;
+  }
+  .verify-email-tab input {
+    width: 220px;
+  }
+}
+@media (min-width: 481px) and (max-width: 849px) {
+  .verify-email-box {
+    width: 58vw;
+    height: 40vh;
+  }
+  .verify-now {
+    width: 50vw;
+    top: 63%;
+  }
+  .email-verify {
+    top: 46%;
+  }
+  .verify-email-tab {
+    top: 52%;
+  }
+  .verify-email-tab input {
+    width: 200px;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1100px) {
+  .verify-email-box {
+    width: 50vw;
+    height: 30vh;
+  }
+  .verify-now {
+    width: 45vw;
+    top: 38%;
+  }
+  .email-verify {
+    top: 25%;
+    font-size: 23px;
+  }
+  .verify-email-tab {
+    top: 30%;
+    font-size: 20px;
+  }
+  .verify-email-tab input {
+    width: 200px;
+  }
 }
